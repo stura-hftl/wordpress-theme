@@ -23,7 +23,9 @@ function setup() {
 function setup_settings() {
 	add_menu_page('StuRa', 'StuRa', 'manage_options', 'stura', 'setup_settings_index');
 
-	add_submenu_page("stura", "Front-Page", "Front-Page", "manage_options", "frontpage", "setup_settings_frontpage");
+	add_submenu_page("stura", "Frontpage", "Frontpage", "manage_options", "frontpage", "setup_settings_frontpage");
+	add_submenu_page("stura", "Subpages", "Subpages", "manage_options", "subpages", "setup_settings_subpages");
+	
 }
 
 function setup_settings_index() {
@@ -48,7 +50,63 @@ function setup_settings_frontpage() {
 	require "settings-frontpage.php";
 }
 
-function stura_get_tile_name($post) {
-	return "stura";
+function setup_settings_subpages() {
+	require "settings-subpages.php";
+}
+
+function startswith($haystack, $needle)
+{
+    return !strncmp($haystack, $needle, strlen($needle));
+}
+
+function _get_root_category($id)
+{
+	$parent = get_category($id);
+	
+	if ( $parent->parent && ( $parent->parent != $parent->term_id ))
+		return _get_root_category($parent->parent);
+	else
+		return $parent->slug;
+	
+}
+
+function stura_tile_name($post)
+{
+	$slugs = array(
+		"studentenrat" => "stura",
+		"stura" => "stura",
+		"technik" => "stura",
+		"uncategorized" => "stura",
+		"hftl-club" => "club",
+		"club" => "club",
+		"service" => "service",
+		"sport" => "sport",
+	);
+	
+	if($post->post_type == "page")
+	{
+		$uri = get_page_uri( $post->ID );
+		
+		if(startswith($uri, "studentenrat"))
+			return "stura";
+		
+		if(startswith($uri, "hftl-club"))
+			return "club";
+	
+		if(startswith($uri, "service"))
+			return "service";
+	
+		if(startswith($uri, "sport"))
+			return "sport";
+	}
+	
+	if($post->post_type == "post")
+	{
+		$cat = get_the_category($post->ID);
+		
+		return $slugs[$cat[0]->slug];
+	}
+	
+	
 }
 ?>

@@ -28,16 +28,16 @@
 				</div>
 			<?php else: ?>
 				<div id="header-nav" class="grid-row">
-					<a class="grid-tile grid-tile-4 bg-cat-stura" href="">
+					<a class="grid-tile grid-tile-4 bg-cat-stura" href="<?php echo home_url(); ?>/studentenrat/">
 						<p>Studentenrat</p>						
 					</a>
-					<a class="grid-tile grid-tile-4 bg-cat-service" href="">
+					<a class="grid-tile grid-tile-4 bg-cat-service" href="<?php echo home_url(); ?>/service/">
 						<p>Service</p>						
 					</a>
-					<a class="grid-tile grid-tile-4 bg-cat-club" href="">
+					<a class="grid-tile grid-tile-4 bg-cat-club" href="<?php echo home_url(); ?>/club/">
 						<p>HfTL-Club</p>						
 					</a>
-					<a class="grid-tile grid-tile-4 grid-tile-last bg-cat-sport" href="">
+					<a class="grid-tile grid-tile-4 grid-tile-last bg-cat-sport" href="<?php echo home_url(); ?>/sport/">
 						<p>Sport</p>						
 					</a>
 					

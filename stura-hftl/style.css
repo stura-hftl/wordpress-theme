@@ -118,6 +118,7 @@ body {
 #header-picture {
 	background: url(img/cover.png) top;
 	height: 300px;
+	margin-bottom: 10px;
 }
 
 #header-top-banner-content {
@@ -155,7 +156,6 @@ body {
 #body {
 	width: 960px;
 	margin: 0 auto;
-	margin-top: 10px;
 }
 
 #footer {
