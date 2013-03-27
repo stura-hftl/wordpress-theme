@@ -1,0 +1,280 @@
+/*
+ Theme Name: StuRa HfTL Theme
+ Theme URI: http://stura.hftl.de
+ Author: StuRa HfTL
+ Author URI: http://stura.hftl.de
+ Description: StuRa HfTL Theme
+ Version: 1.0
+ License: none
+ License URI:
+ Tags:
+ Text Domain: stura-html
+
+ */
+
+/* =Reset
+ -------------------------------------------------------------- */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+
+ul, ol {
+	margin-left: 35px;
+}
+
+ol {
+	list-style: decimal;
+}
+
+ul {
+	list-style: circle;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* = elements
+ -------------------------------------------------------------- */
+
+a {
+	text-decoration: none;
+	color: #4d4d4d;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+
+
+
+/* =layout
+ -------------------------------------------------------------- */
+body {
+	background-color: #fff;
+	padding-top: 10px;
+	font-family: sans-serif;
+	
+	overflow-y: scroll;
+}
+
+#header {
+	width: 960px;
+	margin: 0 auto;
+}
+
+#header form {
+	display: inline;
+}
+
+#header-banner {
+	margin-bottom: 5px;
+	overflow: auto;
+	height: 100px;
+}
+
+#header-banner .left {
+	float: left;
+}
+
+#header-banner .right {
+	float: right;
+	padding: 34px 0;
+}
+
+#header-banner input {
+	border: 1px solid #4d4d4d;
+	padding: 4px 8px;
+}
+
+#header-banner a {
+	padding-right: 20px;
+}
+#header-banner a:hover {
+	text-decoration: underline;
+}
+
+#header-picture {
+	background: url(img/cover.png) top;
+	height: 300px;
+}
+
+#header-top-banner-content {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 100px;
+}
+
+#navbar {
+	width: 960px;
+	margin: 0 auto;
+	background-color: #125a88;
+	color: #fff;
+	margin-top: 10px;
+	display: none;
+}
+
+#navbar ul {
+	padding: 10px;
+}
+
+#navbar li {
+	display: inline;
+	padding-left: 30px;
+	padding-right: 40px;
+}
+
+#nav-grid li {
+	list-style-type: circle;
+	margin-left: 32px;
+}
+
+#body {
+	width: 960px;
+	margin: 0 auto;
+	margin-top: 10px;
+}
+
+#footer {
+	width: 960px;
+	margin: 0 auto;
+	margin-top: 40px;
+	background-color: #4d4d4d;
+	color: #ddd;
+}
+
+#footer h2 {
+	color: #fff;
+	font-weight: bold;
+}
+
+#footer .widget {
+	margin-bottom: 10px;
+}
+
+#footer ul {
+	margin: 0;
+	list-style-type: none;
+	padding: 10px;
+}
+
+#footer a {
+	color: #fff;
+}
+
+/* = grid
+ -------------------------------------------------------------- */
+.grid-row {
+	overflow: hidden;
+	width: 100%;
+}
+
+.grid-tile {
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	display: block;
+}
+
+.grid-tile-4 {
+	width: 232.5px;
+}
+
+.grid-tile-5 {
+	width: 184px;
+}
+
+.grid-tile-last {
+	margin-right: 0px;
+}
+
+.grid-col-content {
+	width: 595px;
+}
+
+.grid-col-sidebar {
+	width: 355px;
+	margin-right: 0px;
+}
+
+.grid-tile p, .grid-tile h3 {
+	padding: 10px;
+}
+
+
+#news-grid .grid-tile-5 {
+	height: 184px;
+}
+
+#landing-grid {
+}
+
+/* = post
+ -------------------------------------------------------------- */
+
+#post h1 {
+	font-size: 16pt;
+	font-weight: bold;
+	padding: 10px;
+}
+
+#post p {
+	padding: 10px;
+	text-align: justify;
+}
+ 
+
+/* = color
+ -------------------------------------------------------------- */
+
+.bg-cat-stura {
+	background-color: #1C95CA;
+	color: #fff;
+}
+
+.bg-cat-club {
+	background-color: #22B10C;
+	color: #fff;
+}
+
+.bg-cat-service {
+	background-color: #FB1929;
+	color: #fff;
+}
+
+.bg-cat-sport {
+	background-color: #FF9219;
+	color: #fff;
+}
+
+
+a.bg-cat-stura, a.bg-cat-club, a.bg-cat-service, a.bg-cat-sport {
+	display: block;
+}
+
+.bg-cat-stura a, .bg-cat-club a, .bg-cat-service a, .bg-cat-sport a {
+	color: #fff;
+}
