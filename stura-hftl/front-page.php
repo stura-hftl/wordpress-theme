@@ -33,28 +33,28 @@ get_header();
 		<div class="grid-tile grid-tile-4">
 			<a class="bg-cat-stura" href="<?php echo home_url() ?>/studentenrat/"><h3>Studentenrat</h3></a>
 			<p>
-				Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+				<?php echo get_option("stura-frontpage-teaser-stura"); ?>
 			</p>
 			<?php wp_nav_menu( array( 'theme_location' => 'stura-menu' ) ); ?>
 		</div>
 		<div class="grid-tile grid-tile-4">
 			<a class="bg-cat-service" href=""><h3>Service</h3></a>
 			<p>
-				Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+				<?php echo get_option("stura-frontpage-teaser-service"); ?>
 			</p>
 			<?php wp_nav_menu( array( 'theme_location' => 'service-menu' ) ); ?>
 		</div>
 		<div class="grid-tile grid-tile-4">
 			<a class="bg-cat-club" href=""><h3>HfTL-Club</h3></a>
 			<p>
-				Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+				<?php echo get_option("stura-frontpage-teaser-club"); ?>
 			</p>
 			<?php wp_nav_menu( array( 'theme_location' => 'club-menu' ) ); ?>
 		</div>
 		<div class="grid-tile grid-tile-4 grid-tile-last">
 			<a class="bg-cat-sport" href=""><h3>Sport</h3></a>
 			<p>
-				Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+				<?php echo get_option("stura-frontpage-teaser-sport"); ?>
 			</p>
 			<?php wp_nav_menu( array( 'theme_location' => 'sport-menu' ) ); ?>
 		</div>
