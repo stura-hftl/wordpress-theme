@@ -75,10 +75,14 @@ function stura_tile_name($post)
 	$slugs = array(
 		"studentenrat" => "stura",
 		"stura" => "stura",
-		"technik" => "stura",
+		"sturaveranstaltungen" => "stura",
+		"referat-technik" => "stura",
+		"referat-betreuung" => "stura",
+		"referat-finanzen" => "stura",
+		"referat-hochschulpolitik" => "stura",
 		"uncategorized" => "stura",
-		"hftl-club" => "club",
 		"club" => "club",
+		"clubveranstaltungen" => "club",
 		"service" => "service",
 		"sport" => "sport",
 	);
@@ -86,27 +90,25 @@ function stura_tile_name($post)
 	if($post->post_type == "page")
 	{
 		$uri = get_page_uri( $post->ID );
-		
+
 		if(startswith($uri, "studentenrat"))
 			return "stura";
-		
+
 		if(startswith($uri, "hftl-club"))
 			return "club";
-	
+
 		if(startswith($uri, "service"))
 			return "service";
-	
+
 		if(startswith($uri, "sport"))
 			return "sport";
 	}
-	
+
 	if($post->post_type == "post")
 	{
 		$cat = get_the_category($post->ID);
-		
+
 		return $slugs[$cat[0]->slug];
 	}
-	
-	
 }
 ?>

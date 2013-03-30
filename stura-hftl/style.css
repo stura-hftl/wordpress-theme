@@ -32,7 +32,7 @@ body {
 }
 
 ul, ol {
-	margin-left: 35px;
+	margin-left: 24px;
 }
 
 ol {
@@ -67,15 +67,13 @@ a:hover {
 }
 
 
-
-
 /* =layout
  -------------------------------------------------------------- */
 body {
 	background-color: #fff;
 	padding-top: 10px;
-	font-family: sans-serif;
-	
+	font-family: segoe ui light, sans-serif;
+
 	overflow-y: scroll;
 }
 
@@ -116,7 +114,7 @@ body {
 }
 
 #header-picture {
-	background: url(img/cover.png) top;
+	background: url(../../uploads/2013/03/pens.jpg) top;
 	height: 300px;
 	margin-bottom: 10px;
 }
@@ -150,7 +148,7 @@ body {
 
 #nav-grid li {
 	list-style-type: circle;
-	margin-left: 32px;
+	margin-left: 16px;
 }
 
 #body {
@@ -227,6 +225,7 @@ body {
 
 #news-grid .grid-tile-5 {
 	height: 184px;
+	font-size:22px;
 }
 
 #landing-grid {
