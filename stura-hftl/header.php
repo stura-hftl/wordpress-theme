@@ -6,6 +6,7 @@
 		<meta charset="<?php bloginfo('charset'); ?>" />
 		
 		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_url'); ?>">
+		<link rel="icon" href="<?php echo get_bloginfo('template_directory'); ?>/img/favicon.ico" type="image/x-icon">
 		
 		<?php wp_head(); ?>
 	</head>
