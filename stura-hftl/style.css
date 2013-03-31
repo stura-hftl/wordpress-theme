@@ -72,7 +72,7 @@ a:hover {
 body {
 	background-color: #fff;
 	padding-top: 10px;
-	font-family: segoe ui light, sans-serif;
+	font-family: 'Open Sans', sans-serif;
 
 	overflow-y: scroll;
 }
@@ -220,6 +220,50 @@ body {
 
 .grid-tile p, .grid-tile h3 {
 	padding: 10px;
+}
+
+.grid-tile a:hover {
+	text-decoration: none;
+}
+
+.grid-tile a.bg-cat-sport:hover {
+	text-decoration: none;
+	background-color: #FFA229;
+}
+
+.grid-tile a.bg-cat-service:hover {
+	text-decoration: none;
+	background-color: #FB3949;
+}
+
+.grid-tile a.bg-cat-stura:hover {
+	text-decoration: none;
+	background-color: #1CA5DA;
+}
+
+.grid-tile a.bg-cat-club:hover {
+	text-decoration: none;
+	background-color: #22C11C;
+}
+
+a.grid-tile.bg-cat-sport:hover {
+	text-decoration: none;
+	background-color: #FFA229;
+}
+
+a.grid-tile.bg-cat-service:hover {
+	text-decoration: none;
+	background-color: #FB3949;
+}
+
+a.grid-tile.bg-cat-stura:hover {
+	text-decoration: none;
+	background-color: #1CA5DA;
+}
+
+a.grid-tile.bg-cat-club:hover {
+	text-decoration: none;
+	background-color: #22C11C;
 }
 
 
