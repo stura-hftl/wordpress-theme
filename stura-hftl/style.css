@@ -222,11 +222,6 @@ body {
 	padding: 10px;
 }
 
-.grid-tile:hover, .grid-tile a:hover {
-	text-decoration: none;
-	opacity: 0.9;
-}
-
 #news-grid .grid-tile-5 {
 	height: 184px;
 	font-size:22px;
@@ -253,31 +248,39 @@ body {
 /* = color
  -------------------------------------------------------------- */
 
+.bg-cat {
+	color: #fff;
+}
+
+a.bg-cat {
+	display: block;
+}
+
+.bg-cat a {
+	color: #fff;
+}
+
+a.bg-cat:hover {
+	text-decoration: none;
+	opacity: 0.8;
+}
+
+
+
 .bg-cat-stura {
 	background-color: #1C95CA;
-	color: #fff;
 }
 
 .bg-cat-club {
 	background-color: #22B10C;
-	color: #fff;
 }
 
 .bg-cat-service {
 	background-color: #FB1929;
-	color: #fff;
 }
 
 .bg-cat-sport {
 	background-color: #FF9219;
-	color: #fff;
 }
 
 
-a.bg-cat-stura, a.bg-cat-club, a.bg-cat-service, a.bg-cat-sport {
-	display: block;
-}
-
-.bg-cat-stura a, .bg-cat-club a, .bg-cat-service a, .bg-cat-sport a {
-	color: #fff;
-}
