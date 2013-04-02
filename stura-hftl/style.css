@@ -73,6 +73,7 @@ body {
 	background-color: #fff;
 	padding-top: 10px;
 	font-family: 'Open Sans', sans-serif;
+	font-size: 11pt;
 
 	overflow-y: scroll;
 }
@@ -161,11 +162,11 @@ body {
 	margin: 0 auto;
 	margin-top: 40px;
 	background-color: #4d4d4d;
-	color: #ddd;
+	color: #eee;
+	font-size: 10pt;
 }
 
 #footer h2 {
-	color: #fff;
 	font-weight: bold;
 }
 
@@ -180,7 +181,7 @@ body {
 }
 
 #footer a {
-	color: #fff;
+	color: inherit;
 }
 
 /* = grid
@@ -224,10 +225,11 @@ body {
 
 #news-grid .grid-tile-5 {
 	height: 184px;
-	font-size:22px;
+	font-size: 16pt;
 }
 
-#landing-grid {
+#landing-grid h3 {
+	font-size: 16pt;
 }
 
 /* = post
