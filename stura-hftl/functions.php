@@ -1,8 +1,8 @@
 <?php
 
 $groups = array(
-	"studentenrat" => "StuRa",
-	"club" => "Club",
+	"studentenrat" => "Studentenrat",
+	"club" => "HfTL-Club",
 	"service" => "Service",
 	"sport" => "Sport"
 );
@@ -100,6 +100,13 @@ function stura_group_name($obj)
 			return _get_group_by_post($obj);
 		}
 	}
+}
+
+function stura_group_label($obj)
+{
+	global $groups;
+	$grp = stura_group_name($obj);
+	return $groups[$grp];
 }
 
 function stura_print_menu($obj)
