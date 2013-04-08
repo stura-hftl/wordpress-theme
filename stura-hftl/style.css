@@ -40,7 +40,7 @@ ol {
 }
 
 ul {
-	list-style: circle;
+	list-style: square;
 }
 blockquote, q {
 	quotes: none;
@@ -115,7 +115,7 @@ body {
 }
 
 #header-picture {
-	background: url(../../uploads/2013/03/pens.jpg) top;
+	background: url(img/big-picture-frontpage.png) top;
 	height: 300px;
 	margin-bottom: 10px;
 }
@@ -211,11 +211,11 @@ body {
 }
 
 .grid-col-content {
-	width: 595px;
+	width: 717px;
 }
 
 .grid-col-sidebar {
-	width: 355px;
+	width: 233px;
 	margin-right: 0px;
 }
 
@@ -225,11 +225,9 @@ body {
 
 #news-grid .grid-tile-5 {
 	height: 184px;
-	font-size: 16pt;
 }
 
 #landing-grid h3 {
-	font-size: 16pt;
 }
 
 /* = post
@@ -252,6 +250,8 @@ body {
 
 .bg-cat {
 	color: #fff;
+	font-size: 16pt;
+	margin-bottom: 10px;
 }
 
 a.bg-cat {
@@ -268,8 +268,12 @@ a.bg-cat:hover {
 }
 
 
+.bg-cat- {
+	/* For an error case. */
+	background-color: #999;
+}
 
-.bg-cat-stura {
+.bg-cat-studentenrat {
 	background-color: #1C95CA;
 }
 

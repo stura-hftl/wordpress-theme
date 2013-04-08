@@ -1,9 +1,9 @@
     <div class="wrap">
-        <?php screen_icon('themes'); ?> <h2>Front page elements</h2>
+        <?php screen_icon('themes'); ?> <h2>Frontpage-Teaser</h2>
 
         <form method="POST" action="">
             <table class="form-table">
-            	<?php foreach($teasers as $key => $label): ?>
+            	<?php foreach($groups as $key => $label): ?>
 	                <tr valign="top">
 	                    <th scope="row">
 	                        <label for="id-<?php echo $key ?>-teaser">

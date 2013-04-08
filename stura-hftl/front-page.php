@@ -20,7 +20,7 @@ get_header();
 <div id="body">
 	<div id="news-grid" class="grid-row">
 		<?php foreach($news as $post): ?>
-			<a class="grid-tile grid-tile-5 bg-cat bg-cat-<? echo stura_tile_name($post); ?> <?php echo $post->is_last?"grid-tile-last":''; ?>"
+			<a class="grid-tile grid-tile-5 bg-cat bg-cat-<? echo stura_group_name($post); ?> <?php echo $post->is_last?"grid-tile-last":''; ?>"
 				 href="<?php echo get_permalink($post->ID); ?>">
 				<p>
 					<? echo $post->post_title; ?>
@@ -31,11 +31,11 @@ get_header();
 
 	<div id="landing-grid" class="grid-row">
 		<div class="grid-tile grid-tile-4">
-			<a class="bg-cat bg-cat-stura" href="<?php echo home_url() ?>/studentenrat/"><h3>Studentenrat</h3></a>
+			<a class="bg-cat bg-cat-studentenrat" href="<?php echo home_url() ?>/studentenrat/"><h3>Studentenrat</h3></a>
 			<p>
-				<?php echo get_option("stura-frontpage-teaser-stura"); ?>
+				<?php echo get_option("stura-frontpage-teaser-studentenrat"); ?>
 			</p>
-			<?php wp_nav_menu( array( 'theme_location' => 'stura-menu' ) ); ?>
+			<?php wp_nav_menu( array( 'theme_location' => 'studentenrat-menu' ) ); ?>
 		</div>
 		<div class="grid-tile grid-tile-4">
 			<a class="bg-cat bg-cat-service" href=""><h3>Service</h3></a>

@@ -26,7 +26,7 @@
 				</div>
 			</div>
 			<div id="header-nav" class="grid-row">
-				<a class="grid-tile grid-tile-4 bg-cat bg-cat-stura" href="<?php echo home_url(); ?>/studentenrat/">
+				<a class="grid-tile grid-tile-4 bg-cat bg-cat-studentenrat" href="<?php echo home_url(); ?>/studentenrat/">
 					<p>Studentenrat</p>						
 				</a>
 				<a class="grid-tile grid-tile-4 bg-cat bg-cat-service" href="<?php echo home_url(); ?>/service/">
