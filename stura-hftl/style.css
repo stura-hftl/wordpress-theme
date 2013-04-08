@@ -115,9 +115,21 @@ body {
 }
 
 #header-picture {
-	background: url(img/big-picture-frontpage.png) top;
-	height: 300px;
 	margin-bottom: 10px;
+	text-align: center;
+	overflow: hidden;
+}
+
+#header-picture.frontpage {
+	height: 300px;
+}
+
+#header-picture.grouppage {
+	height: 150px;
+}
+
+#header-picture img {
+	width: 100%;
 }
 
 #header-top-banner-content {

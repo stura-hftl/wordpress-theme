@@ -40,7 +40,13 @@
 				</a>
 			</div>
 			<?php if(is_front_page()): ?>
-				<div id="header-picture">
+				<div id="header-picture" class="frontpage">
+					<img src="<?php echo get_option("stura-bigpicture-frontpage"); ?>">
+				</div>
+			<?php endif; ?>
+			<?php if(stura_is_grouppage($post)): ?>
+				<div id="header-picture" class="grouppage">
+					<img src="<?php echo get_option("stura-bigpicture-".stura_group_name($post)); ?>">
 				</div>
 			<?php endif; ?>
 		</div>

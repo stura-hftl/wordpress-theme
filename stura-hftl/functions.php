@@ -10,6 +10,8 @@ $groups = array(
 
 add_action('init', 'setup');
 add_action("admin_menu", "setup_settings");
+add_action('admin_print_scripts', 'my_admin_scripts');
+add_action('admin_print_styles', 'my_admin_styles');
 
 function setup() {
 	
@@ -31,6 +33,7 @@ function setup() {
 function setup_settings() {
 	add_menu_page('StuRa', 'StuRa', 'manage_options', 'studentenrat', 'setup_settings_index');
 	add_submenu_page("studentenrat", "Frontpage", "Frontpage", "manage_options", "frontpage", "setup_settings_frontpage");
+	add_submenu_page("studentenrat", "Big-Pictures", "Big-Pictures", "manage_options", "bigpictures", "setup_settings_bigpictures");
 }
 
 function setup_settings_index() {
@@ -48,6 +51,38 @@ function setup_settings_frontpage() {
 	}
 	
 	require "settings-frontpage.php";
+}
+
+function my_admin_scripts() {
+	wp_enqueue_script('media-upload');
+	wp_enqueue_script('thickbox');
+	wp_register_script('my-upload', get_bloginfo('template_directory').'/js/big-picture-upload.js', array('jquery','media-upload','thickbox'));
+	wp_enqueue_script('my-upload');
+}
+
+function my_admin_styles() {
+	wp_enqueue_style('thickbox');
+}
+
+
+function setup_settings_bigpictures() {
+	$pictures = array(
+		"frontpage" => "Frontpage",
+		"studentenrat" => "StuRa",
+		"club" => "Club",
+		"service" => "Service",
+		"sport" => "Sport",
+	);
+
+	foreach($pictures as $slug => $label)
+	{
+		if (isset($_POST["upload_picture_".$slug])) {
+			$url = esc_attr($_POST["upload_picture_".$slug]);
+			update_option("stura-bigpicture-" . $slug, $url);
+		}
+	}
+
+	require "settings-bigpictures.php";
 }
 
 function startswith($haystack, $needle)
@@ -100,6 +135,22 @@ function stura_group_name($obj)
 			return _get_group_by_post($obj);
 		}
 	}
+}
+
+function stura_is_grouppage($obj)
+{
+	global $groups;
+	
+	if(!$obj instanceof WP_Post)
+		return false;
+	
+	if($obj->post_type != "page")
+		return false;
+	
+	if(!isset($groups[$obj->post_name]))
+		return false;
+	
+	return true;
 }
 
 function stura_group_label($obj)
