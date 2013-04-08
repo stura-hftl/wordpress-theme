@@ -7,9 +7,12 @@ $news = get_posts(array(
 	'category_name' => stura_group_name($post)
 ));
 
-// mark last post
-end($news)->is_last = true;
-reset($news);
+if(!empty($news))
+{
+	// mark last post
+	end($news)->is_last = true;
+	reset($news);
+}
 
 
 the_post(); // activates the post
