@@ -41,16 +41,18 @@ get_header();
 		</div>
 		
 	</div>
-	<div id="news-grid" class="grid-row">
-		<?php foreach($news as $post): ?>
-			<a class="grid-tile grid-tile-5 bg-cat bg-cat-<? echo stura_group_name($post); ?> <?php echo $post->is_last?"grid-tile-last":''; ?>"
-				 href="<?php echo get_permalink($post->ID); ?>">
-				<p>
-					<? echo $post->post_title; ?>
-				</p>
-			</a>
-		<?php endforeach; ?>
-	</div>
+	<?php if(stura_is_grouppage($post)): ?>
+		<div id="news-grid" class="grid-row">
+			<?php foreach($news as $post): ?>
+				<a class="grid-tile grid-tile-5 bg-cat bg-cat-<? echo stura_group_name($post); ?> <?php echo $post->is_last?"grid-tile-last":''; ?>"
+					 href="<?php echo get_permalink($post->ID); ?>">
+					<p>
+						<? echo $post->post_title; ?>
+					</p>
+				</a>
+			<?php endforeach; ?>
+		</div>
+	<?php endif; ?>
 
 </div>
 
