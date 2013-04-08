@@ -3,6 +3,10 @@
 
         <form method="POST" action="">
             <table class="form-table">
+            	<tr valign="top">
+            		<th scope="row"></th>
+            		<td>Breite: 960px, Höhe: 300px bzw 150px, Richtige Größe auswählen.</td>
+            	</tr>
             	<?php foreach($pictures as $slug => $label): ?>
 	            	<tr valign="top" class="js-bigpicture-upload">
 						<th scope="row"><?php echo $label ?> Picture</th>

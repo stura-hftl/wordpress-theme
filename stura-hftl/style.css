@@ -118,6 +118,8 @@ body {
 	margin-bottom: 10px;
 	text-align: center;
 	overflow: hidden;
+	background-position: center center;
+	background-repeat: no-repeat;
 }
 
 #header-picture.frontpage {
@@ -128,9 +130,6 @@ body {
 	height: 150px;
 }
 
-#header-picture img {
-	width: 100%;
-}
 
 #header-top-banner-content {
 	position: absolute;
