@@ -44,8 +44,8 @@
 				<div id="header-picture" class="frontpage"
 					style="background-image: url(<?php echo get_option("stura-bigpicture-frontpage"); ?>)">
 				</div>
-			<?php endif; ?>
-			<?php if(stura_is_grouppage($post)): ?>
+			<?php else: ?>
+			<?php /* if(stura_is_grouppage($post)): */ ?>
 				<div id="header-picture" class="grouppage"
 					style="background-image: url(<?php echo get_option("stura-bigpicture-".stura_group_name($post)); ?>)">
 				</div>
