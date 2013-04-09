@@ -20,6 +20,7 @@
 					</a>
 				</div>
 				<div class="right">
+					<a href="<?php echo home_url(); ?>">Startseite</a>
 					<a href="">Kontakt</a>
 					<a href="https://www.facebook.com/stura.hftl">Facebook</a>
 					<?php echo get_search_form( false ); ?>
