@@ -87,6 +87,11 @@ body {
 	display: inline;
 }
 
+#header .left a, #header .left a:hover {
+	/* IE bugfix */
+	text-decoration: none;
+}
+
 #header-banner {
 	margin-bottom: 5px;
 	overflow: auto;
