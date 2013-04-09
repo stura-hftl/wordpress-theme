@@ -259,6 +259,10 @@ body {
 	padding: 10px;
 	text-align: justify;
 }
+
+.padding-box {
+	margin-bottom: 10px;
+}
  
 
 /* = color

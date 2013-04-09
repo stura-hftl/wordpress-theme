@@ -17,6 +17,8 @@ if(!empty($news))
 
 the_post(); // activates the post
 
+$group_name = stura_group_name($post);
+
 //----------------------------------
 
 get_header();
@@ -27,24 +29,33 @@ get_header();
 
 <div id="body">
 	<div class="grid-row">
-		
 		<div id="post" class="grid-tile grid-col-content">
-			<h1>
+			<h1 class="bg-cat bg-cat-<?php echo $group_name ?>">
 				<?php echo $post->post_title ?>
 			</h1>
 			<?php the_content(); ?>
 		</div>
-		
 		<div id="sidebar" class="grid-tile grid-col-sidebar">
-			 <h3 class="bg-cat bg-cat-<?php echo stura_group_name($post);?>"><?php echo stura_group_label($post); ?></h3>
-			 <?php stura_print_menu($post) ?>
+			<?php foreach(get_the_category() as $category): ?>
+			 	<a href="<?php echo get_category_link($category->cat_ID) ?>" class="bg-cat bg-cat-<?php echo $group_name ?>">
+			 		<p>
+			 			<?php echo $category->name; ?>
+		 			</p>
+		 		</a>
+			<?php endforeach; ?>
+			
+			<p class="bg-cat bg-cat-<?php echo $group_name ?>">
+				<?php the_date() ?>
+			</p>
+
+			<?php stura_print_menu($post) ?>
+			
 		</div>
-		
 	</div>
 	<?php if(stura_is_grouppage($post)): ?>
 		<div id="news-grid" class="grid-row">
 			<?php foreach($news as $post): ?>
-				<a class="grid-tile grid-tile-5 bg-cat bg-cat-<? echo stura_group_name($post); ?> <?php echo $post->is_last?"grid-tile-last":''; ?>"
+				<a class="grid-tile grid-tile-5 bg-cat bg-cat-<? echo $group_name ?> <?php echo $post->is_last?"grid-tile-last":''; ?>"
 					 href="<?php echo get_permalink($post->ID); ?>">
 					<p>
 						<? echo $post->post_title; ?>
@@ -53,7 +64,6 @@ get_header();
 			<?php endforeach; ?>
 		</div>
 	<?php endif; ?>
-
 </div>
 
 <?php get_footer(); ?>
