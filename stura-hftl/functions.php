@@ -13,6 +13,15 @@ add_action("admin_menu", "setup_settings");
 add_action('admin_print_scripts', 'my_admin_scripts');
 add_action('admin_print_styles', 'my_admin_styles');
 
+
+function startswith($haystack, $needle)
+{
+    return !strncmp($haystack, $needle, strlen($needle));
+}
+
+
+
+
 function setup() {
 	
 	register_sidebar(array('id' => 'sidebar', 'name' => "Sidebar", ));
@@ -85,11 +94,6 @@ function setup_settings_bigpictures() {
 	}
 
 	require "settings-bigpictures.php";
-}
-
-function startswith($haystack, $needle)
-{
-    return !strncmp($haystack, $needle, strlen($needle));
 }
 
 
@@ -170,6 +174,11 @@ function stura_print_menu($obj)
 {
 	$group = stura_group_name($obj);
 	wp_nav_menu( array( 'theme_location' => $group.'-menu' ) );
+}
+
+function stura_print_bg_class($obj)
+{
+	print "bg-cat bg-cat-".stura_group_name($obj);
 }
 
 

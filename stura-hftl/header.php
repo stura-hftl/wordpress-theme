@@ -44,10 +44,13 @@
 				<div id="header-picture" class="frontpage"
 					style="background-image: url(<?php echo get_option("stura-bigpicture-frontpage"); ?>)">
 				</div>
-			<?php else: ?>
-			<?php /* if(stura_is_grouppage($post)): */ ?>
+			<?php elseif(is_single() || is_page()): ?>
 				<div id="header-picture" class="grouppage"
 					style="background-image: url(<?php echo get_option("stura-bigpicture-".stura_group_name($post)); ?>)">
+				</div>
+			<?php else: ?>
+				<div id="header-picture" class="grouppage"
+					style="background-image: url(<?php echo get_option("stura-bigpicture-uncategorized"); ?>)">
 				</div>
 			<?php endif; ?>
 		</div>
