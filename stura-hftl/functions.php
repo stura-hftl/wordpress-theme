@@ -72,6 +72,7 @@ function setup_settings_bigpictures() {
 		"club" => "Club",
 		"service" => "Service",
 		"sport" => "Sport",
+		"uncategorized" => "Allgemein"
 	);
 
 	foreach($pictures as $slug => $label)
@@ -115,6 +116,8 @@ function _get_group_by_post($post)
 			}
 		}
 	}
+	
+	return 'uncategorized';
 }
 
 function stura_group_name($obj)
@@ -135,6 +138,8 @@ function stura_group_name($obj)
 			return _get_group_by_post($obj);
 		}
 	}
+
+	return 'uncategorized';
 }
 
 function stura_is_grouppage($obj)

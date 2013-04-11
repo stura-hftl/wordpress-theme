@@ -288,8 +288,7 @@ a.bg-cat:hover {
 }
 
 
-.bg-cat- {
-	/* For an error case. */
+.bg-cat-, .bg-cat-uncategorized {
 	background-color: #999;
 }
 
