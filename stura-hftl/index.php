@@ -36,6 +36,10 @@ get_header();
 			<?php the_content(); ?>
 		</div>
 		<div id="sidebar" class="grid-tile grid-col-sidebar">
+			<p class="bg-cat bg-cat-<?php echo $group_name ?>">
+				<?php the_date() ?>
+			</p>
+
 			<?php foreach(get_the_category() as $category): ?>
 			 	<a href="<?php echo get_category_link($category->cat_ID) ?>" class="bg-cat bg-cat-<?php echo $group_name ?>">
 			 		<p>
@@ -44,9 +48,6 @@ get_header();
 		 		</a>
 			<?php endforeach; ?>
 			
-			<p class="bg-cat bg-cat-<?php echo $group_name ?>">
-				<?php the_date() ?>
-			</p>
 
 			<?php stura_print_menu($post) ?>
 			
