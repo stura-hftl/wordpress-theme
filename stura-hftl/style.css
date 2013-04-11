@@ -276,6 +276,10 @@ a.bg-cat {
 	display: block;
 }
 
+.bg-cat h1 {
+	padding: 10px;
+}
+
 .bg-cat a {
 	color: #fff;
 }
