@@ -50,11 +50,12 @@ get_header();
 		 		</a>
 			<?php endforeach; ?>
 			
-			<p class="bg-cat bg-cat-<?php echo $group_name ?>">
-					Menü
-			</p>
-			
+			<p class="bg-cat bg-cat-<?php echo $group_name ?>">Menü</p>
 			<?php stura_print_menu($post) ?>
+			
+			<ul id="sidebar">
+				<?php dynamic_sidebar('sidebar'); ?>
+			</ul>
 			
 		</div>
 	</div>

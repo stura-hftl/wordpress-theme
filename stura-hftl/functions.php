@@ -15,6 +15,7 @@ add_action('admin_print_styles', 'my_admin_styles');
 
 function setup() {
 	
+	register_sidebar(array('id' => 'sidebar', 'name' => "Sidebar", ));
 	register_sidebar(array('id' => 'footer-col-1', 'name' => "Footer Spalte 1", ));
 	register_sidebar(array('id' => 'footer-col-2', 'name' => "Footer Spalte 2", ));
 	register_sidebar(array('id' => 'footer-col-3', 'name' => "Footer Spalte 3", ));
