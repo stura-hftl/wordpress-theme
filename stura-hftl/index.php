@@ -30,35 +30,11 @@ get_header();
 <div id="body">
 	<div class="grid-row">
 		<div id="post" class="grid-tile grid-col-content">
-			<h1 class="bg-cat bg-cat-<?php echo $group_name ?>">
-				<?php echo $post->post_title ?>
-			</h1>
-			<div class="text-tile">
-				<?php the_content(); ?>
-			</div>
+			<?php require "_post-content.php" ?>
+			<?php //require "_post-comments.php" ?>
 		</div>
 		<div id="sidebar" class="grid-tile grid-col-sidebar">
-			<?php if(!is_page()): ?>
-				<p class="bg-cat bg-cat-<?php echo $group_name ?>">
-					<?php the_date() ?>
-				</p>
-			<?php endif; ?>
-
-			<?php foreach(get_the_category() as $category): ?>
-			 	<a href="<?php echo get_category_link($category->cat_ID) ?>" class="bg-cat bg-cat-<?php echo $group_name ?>">
-			 		<p>
-			 			<?php echo $category->name; ?>
-		 			</p>
-		 		</a>
-			<?php endforeach; ?>
-			
-			<p class="bg-cat bg-cat-<?php echo $group_name ?>">Menü</p>
-			<?php stura_print_menu($post) ?>
-			
-			<ul id="sidebar">
-				<?php dynamic_sidebar('sidebar'); ?>
-			</ul>
-			
+			<?php require "_post-sidebar.php" ?>
 		</div>
 	</div>
 	<?php if(stura_is_grouppage($post)): ?>
