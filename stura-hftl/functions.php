@@ -6,6 +6,18 @@ $groups = array(
 	"service" => "Service",
 	"sport" => "Sport"
 );
+
+$pictures = array(
+	"frontpage" => array("Frontpage Big-Picture", "960 x 300 px"),
+	"studentenrat" => array("StuRa Big-Picture", "960 x 150 px"),
+	"club" => array("Club Big-Picture", "960 x 150 px"),
+	"service" => array("Service Big-Picture", "960 x 150 px"),
+	"sport" => array("Sport Big-Picture", "960 x 300 px"),
+	"uncategorized" => array("Allgemein Big-Picture", "960 x 150 px"),
+	"error404" => array("404 Not Found Picture", "960 x 640 px")
+);
+
+
 	
 
 add_action('init', 'setup');
@@ -43,7 +55,7 @@ function setup() {
 function setup_settings() {
 	add_menu_page('StuRa', 'StuRa', 'manage_options', 'studentenrat', 'setup_settings_index');
 	add_submenu_page("studentenrat", "Frontpage", "Frontpage", "manage_options", "frontpage", "setup_settings_frontpage");
-	add_submenu_page("studentenrat", "Big-Pictures", "Big-Pictures", "manage_options", "bigpictures", "setup_settings_bigpictures");
+	add_submenu_page("studentenrat", "Pictures", "Pictures", "manage_options", "pictures", "setup_settings_pictures");
 }
 
 function setup_settings_index() {
@@ -75,25 +87,19 @@ function my_admin_styles() {
 }
 
 
-function setup_settings_bigpictures() {
-	$pictures = array(
-		"frontpage" => "Frontpage",
-		"studentenrat" => "StuRa",
-		"club" => "Club",
-		"service" => "Service",
-		"sport" => "Sport",
-		"uncategorized" => "Allgemein"
-	);
-
-	foreach($pictures as $slug => $label)
+function setup_settings_pictures() {
+	global $pictures;
+	
+	foreach($pictures as $slug => $info)
 	{
+		list($label, $hint) = $info;
 		if (isset($_POST["upload_picture_".$slug])) {
 			$url = esc_attr($_POST["upload_picture_".$slug]);
 			update_option("stura-bigpicture-" . $slug, $url);
 		}
 	}
 
-	require "settings-bigpictures.php";
+	require "settings-pictures.php";
 }
 
 

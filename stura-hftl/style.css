@@ -135,6 +135,10 @@ body {
 	height: 150px;
 }
 
+#header-picture.errorpage {
+	height: 640px;
+	background-position: top;
+}
 
 #header-top-banner-content {
 	position: absolute;
