@@ -214,6 +214,10 @@ body {
 	display: block;
 }
 
+.grid-tile-2 {
+	width: 475px;
+}
+
 .grid-tile-4 {
 	width: 232.5px;
 }
