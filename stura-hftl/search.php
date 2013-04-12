@@ -20,7 +20,9 @@ get_header(); ?>
 							</p>
 						</a>
 						
-						<? echo the_excerpt(); ?>
+						<div class="text-tile">
+							<? echo the_excerpt(); ?>
+						</div>
 					</div>
 				<?php endwhile; ?>
 			</div>

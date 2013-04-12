@@ -33,7 +33,9 @@ get_header();
 			<h1 class="bg-cat bg-cat-<?php echo $group_name ?>">
 				<?php echo $post->post_title ?>
 			</h1>
-			<?php the_content(); ?>
+			<div class="text-tile">
+				<?php the_content(); ?>
+			</div>
 		</div>
 		<div id="sidebar" class="grid-tile grid-col-sidebar">
 			<?php if(!is_page()): ?>

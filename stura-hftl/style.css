@@ -32,7 +32,7 @@ body {
 }
 
 ul, ol {
-	margin-left: 24px;
+	margin-left: 35px;
 }
 
 ol {
@@ -254,24 +254,49 @@ body {
 #landing-grid h3 {
 }
 
-/* = post
+/* = text tile
  -------------------------------------------------------------- */
 
-#post h1 {
-	padding: 10px;
+.text-tile {
+	margin-top: -10px; /* Assuming, .text-tile follows after a bg-cat tile */
 }
 
-#post p {
+.text-tile h1 {
+	padding: 10px;
+	font-size: 1.4em;
+}
+
+.text-tile h2 {
+	padding: 10px;
+	font-size: 1.3em;
+}
+
+.text-tile h3 {
+	padding: 10px;
+	font-size: 1.2em;
+}
+
+.text-tile h4 {
+	padding: 10px;
+	font-size: 1.1em;
+}
+
+.text-tile p {
 	padding: 10px;
 	text-align: justify;
 }
 
-.padding-box {
-	margin-bottom: 10px;
+.text-tile table {
+	margin: 10px auto;
+	border-collapse: collapse;
 }
- 
 
-/* = color
+.text-tile td, .text-tile th {
+	padding: 3px 10px;
+	border: 1px solid #999;
+}
+
+/* = background tile
  -------------------------------------------------------------- */
 
 .bg-cat {
@@ -285,7 +310,7 @@ a.bg-cat {
 	display: block;
 }
 
-.bg-cat h1 {
+.bg-cat h1, h1.bg-cat {
 	padding: 10px;
 }
 
