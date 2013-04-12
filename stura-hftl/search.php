@@ -12,13 +12,16 @@ get_header(); ?>
 		<?php if ( have_posts() ) : ?>
 			<div id="news-grid" class="grid-row">
 				<?php while ( have_posts() ) : the_post(); ?>
-					<a class="grid-tile grid-tile-2 <?php stura_print_bg_class($post); ?> <?php echo (++$i%2==0)?"grid-tile-last":''; ?>"
-						 href="<?php echo get_permalink($post->ID); ?>">
-						<p>
-							<? echo the_title(); ?>
-						</p>
-					</a>
-				
+					<div class="grid-tile grid-tile-2 <?php echo (++$i%2==0)?"grid-tile-last":''; ?>">
+						<a class="<?php stura_print_bg_class($post); ?>"
+							 href="<?php echo get_permalink($post->ID); ?>">
+							<p>
+								<? echo the_title(); ?>
+							</p>
+						</a>
+						
+						<? echo the_excerpt(); ?>
+					</div>
 				<?php endwhile; ?>
 			</div>
 		<?php else: ?>
