@@ -6,8 +6,10 @@
 		<meta charset="<?php bloginfo('charset'); ?>" />
 		
 		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_url'); ?>">
-		<link rel="icon" href="<?php echo get_bloginfo('template_directory'); ?>/img/favicon.ico" type="image/x-icon"> 
+		<link rel="icon" href="<?php echo get_bloginfo('template_directory'); ?>/img/favicon.ico" type="image/x-icon">
+		 
 		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans" type="text/css">
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300" type="text/css">
 
 		<?php wp_head(); ?>
 	</head>

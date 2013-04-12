@@ -72,8 +72,8 @@ a:hover {
 body {
 	background-color: #fff;
 	padding-top: 10px;
-	font-family: 'Open Sans', sans-serif;
-	font-size: 11pt;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 13pt;
 
 	overflow-y: scroll;
 }
@@ -278,6 +278,7 @@ body {
 	color: #fff;
 	font-size: 16pt;
 	margin-bottom: 10px;
+	font-family: 'Open Sans', sans-serif;
 }
 
 a.bg-cat {
