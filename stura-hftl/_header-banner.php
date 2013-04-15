@@ -7,7 +7,7 @@
 				<div class="right">
 					<a href="<?php echo home_url(); ?>">Startseite</a>
 					<a href="kontakt/">Kontakt</a>
-					<a href="https://www.facebook.com/stura.hftl">Facebook</a>
+					<a ref="https://www.facebook.com/stura.hftl" target="_blank">Facebook</a>
 					<?php echo get_search_form( false ); ?>
 				</div>
 			</div>
