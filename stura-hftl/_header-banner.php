@@ -6,7 +6,7 @@
 				</div>
 				<div class="right">
 					<a href="<?php echo home_url(); ?>">Startseite</a>
-					<a href="kontakt/">Kontakt</a>
+					<a href="<?php echo home_url(); ?>/studentenrat/kontakt/">Kontakt</a>
 					<a href="https://www.facebook.com/stura.hftl" target="_blank">Facebook</a>
 					<?php echo get_search_form( false ); ?>
 				</div>
