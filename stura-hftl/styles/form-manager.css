@@ -1,6 +1,15 @@
+/* Good luck! */
+
 .fm-form legend {
+	color: #fff;
 	font-size: 16pt;
+	margin-bottom: 10px;
+	font-family: 'Open Sans', sans-serif;
 	padding: 10px;
+	border: 0;
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
 }
 
 .fm-form ul {
@@ -22,15 +31,19 @@
 	padding: 5px 10px;
 }
 
+.fm-form div {
+	text-align: right;
+}
+
 .fm-form .submit {
 	color: #fff;
 	font-size: 16pt;
-	margin-bottom: 10px;
 	font-family: 'Open Sans', sans-serif;
 	padding: 10px;
 	border: 0;
 	cursor: pointer;
-	float: right;
+	margin: 0;
+	outline: 10px solid #fff;
 }
 
 .fm-form label em {
@@ -40,19 +53,27 @@
 
 
 /* Hacks FTW! */
-.page-cat-studentenrat .fm-form .submit {
+.page-cat-studentenrat .fm-form .submit,
+.page-cat-studentenrat .fm-form div,
+.page-cat-studentenrat .fm-form legend {
 	background-color: #1C95CA;
 }
 
-.page-cat-club .fm-form .submit{
+.page-cat-club .fm-form .submit,
+.page-cat-club .fm-form div,
+.page-cat-club .fm-form legend {
 	background-color: #22B10C;
 }
 
-.page-cat-service .fm-form .submit {
+.page-cat-service .fm-form .submit,
+.page-cat-service .fm-form div,
+.page-cat-service .fm-form legend {
 	background-color: #FB1929;
 }
 
-.page-cat-sport .fm-form .submit {
+.page-cat-sport .fm-form .submit,
+.page-cat-sport .fm-form div,
+.page-cat-sport .fm-form legend {
 	background-color: #FF9219;
 }
 
