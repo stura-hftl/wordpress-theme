@@ -3,6 +3,7 @@
 .fm-form legend {
 	padding: 10px;
 	font-size: 1.4em;
+	font-family: 'Open Sans', sans-serif;
 }
 
 .fm-form ul {
@@ -61,4 +62,22 @@
 .page-cat-sport .fm-form .submit {
 	background-color: #FF9219;
 }
+
+
+.page-cat-studentenrat .fm-form legend {
+	color: #1C95CA;
+}
+
+.page-cat-club .fm-form legend {
+	color: #22B10C;
+}
+
+.page-cat-service .fm-form legend {
+	color: #FB1929;
+}
+
+.page-cat-sport .fm-form legend {
+	color: #FF9219;
+}
+
 
