@@ -1,15 +1,8 @@
 /* Good luck! */
 
 .fm-form legend {
-	color: #fff;
-	font-size: 16pt;
-	margin-bottom: 10px;
-	font-family: 'Open Sans', sans-serif;
 	padding: 10px;
-	border: 0;
-	display: block;
-	width: 100%;
-	box-sizing: border-box;
+	font-size: 1.4em;
 }
 
 .fm-form ul {
@@ -53,27 +46,19 @@
 
 
 /* Hacks FTW! */
-.page-cat-studentenrat .fm-form .submit,
-.page-cat-studentenrat .fm-form div,
-.page-cat-studentenrat .fm-form legend {
+.page-cat-studentenrat .fm-form .submit {
 	background-color: #1C95CA;
 }
 
-.page-cat-club .fm-form .submit,
-.page-cat-club .fm-form div,
-.page-cat-club .fm-form legend {
+.page-cat-club .fm-form .submit {
 	background-color: #22B10C;
 }
 
-.page-cat-service .fm-form .submit,
-.page-cat-service .fm-form div,
-.page-cat-service .fm-form legend {
+.page-cat-service .fm-form .submit {
 	background-color: #FB1929;
 }
 
-.page-cat-sport .fm-form .submit,
-.page-cat-sport .fm-form div,
-.page-cat-sport .fm-form legend {
+.page-cat-sport .fm-form .submit {
 	background-color: #FF9219;
 }
 
