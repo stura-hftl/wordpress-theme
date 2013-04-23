@@ -54,6 +54,9 @@ function setup() {
 	// relocate some plugin styles
 	wp_deregister_style("form-manager-css");
 	wp_register_style("form-manager-css", get_template_directory_uri()."/styles/form-manager.css");
+	
+	wp_deregister_style("wp-publication-archive-frontend");
+	wp_register_style("wp-publication-archive-frontend", get_template_directory_uri()."/styles/wp-publication-archive-frontend.css");
 }
 
 function setup_settings() {

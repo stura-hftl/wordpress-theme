@@ -1,0 +1,38 @@
+.publication-archive {
+    margin-top: -20px;
+	}
+
+.publication_title {
+    font-family: 'Open Sans', sans-serif;
+    color: #1C95CA;
+    font-size: 1.3em;
+    padding-bottom: 5px;
+	}
+
+.publication_authors {
+	}
+	
+	.publication-archive span.title {
+	    padding-right: 10px;
+	}
+
+.publication_authors .date {
+	}
+
+.publication_download {
+	}
+.publication_summary {
+	}
+
+.publication_summary .title, .publication_keywords .title, .publication_categories .title{
+	}
+
+.publication_keywords {
+	}
+
+.publication_categories {
+	}
+	
+.single-publication {
+    padding: 10px;
+	}
