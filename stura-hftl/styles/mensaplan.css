@@ -1,0 +1,36 @@
+.mensa-item h1 {
+	float: left;
+}
+
+.mensa-item ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0 10px 10px 10px !important;
+	
+	clear: both;
+}
+
+.mensa-price {
+	margin: 0;
+	margin-top: 10px;
+	float: right;
+
+	color: #fff;
+	background: #FB1929;
+	border: 0;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.mensa-dayselector select, .mensa-dayselector input {
+	padding: 4px 8px;
+	margin: 10px;
+	color: #fff;
+	background: #FB1929;
+	border: 0;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.mensa-dayselector option {
+	color: #000;
+	background: #fff;
+}
