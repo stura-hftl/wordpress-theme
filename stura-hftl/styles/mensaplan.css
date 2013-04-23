@@ -28,6 +28,7 @@
 	background: #FB1929;
 	border: 0;
 	font-family: 'Open Sans', sans-serif;
+	-webkit-appearance: none; /* HACK for Chrome */
 }
 
 .mensa-dayselector option {
