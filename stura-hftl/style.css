@@ -298,6 +298,19 @@ body {
 	border: 1px solid #999;
 }
 
+.text-tile .wp-caption {
+	margin: 10px 0 10px 10px;
+}
+
+.text-tile .wp-caption p {
+	padding: 0;
+	text-align: center;
+}
+
+.text-tile .alignright {
+	float: right;
+}
+
 /* = contact form plugin
  -------------------------------------------------------------- */
 
