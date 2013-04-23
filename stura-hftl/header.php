@@ -10,10 +10,10 @@
 		 
 		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans" type="text/css">
 		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300" type="text/css">
-
+		
 		<?php wp_head(); ?>
 	</head>
-	<body>
+	<body class="page-cat-<?php echo stura_group_name($post) ?>">
 		<div id="header">
 			<?php require "_header-banner.php" ?>
 			<?php require "_header-nav.php" ?>

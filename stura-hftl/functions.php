@@ -50,6 +50,10 @@ function setup() {
 	register_nav_menu('hopo-menu', __('HoPo Referat Menu'));
 	register_nav_menu('betreuung-menu', __('Betreuung Referat Menu'));
 	register_nav_menu('finanzen-menu', __('Finanzen Referat Menu'));
+	
+	// relocate some plugin styles
+	wp_deregister_style("form-manager-css");
+	wp_register_style("form-manager-css", get_template_directory_uri()."/styles/form-manager.css");
 }
 
 function setup_settings() {
