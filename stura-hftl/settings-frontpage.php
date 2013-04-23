@@ -11,7 +11,7 @@
 	                        </label> 
 	                    </th>
 	                    <td>
-	                        <textarea name="<?php echo $key ?>-teaser" id="id-<?php echo $key ?>-teaser" rows="10" cols="50" class="large-text code"><?php echo get_option("stura-frontpage-teaser-" . $key); ?></textarea>
+	                        <textarea name="<?php echo $key ?>-teaser" id="id-<?php echo $key ?>-teaser" rows="10" cols="50" class="large-text code"><?php echo htmlspecialchars(get_option("stura-frontpage-teaser-" . $key)); ?></textarea>
 	                    </td>
 	                </tr>
                 <?php endforeach; ?>
