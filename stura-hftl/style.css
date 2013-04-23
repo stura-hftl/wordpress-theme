@@ -350,4 +350,34 @@ a.bg-cat:hover {
 	background-color: #FF9219;
 }
 
+.page-cat-studentenrat .text-tile h1,
+.page-cat-studentenrat .text-tile h2,
+.page-cat-studentenrat .text-tile h3,
+.page-cat-studentenrat .text-tile h4 {
+	color: #1C95CA;
+	font-family: 'Open Sans', sans-serif;
+}
 
+.page-cat-club .text-tile h1,
+.page-cat-club .text-tile h2,
+.page-cat-club .text-tile h3,
+.page-cat-club .text-tile h4 {
+	color: #22B10C;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.page-cat-service .text-tile h1,
+.page-cat-service .text-tile h2,
+.page-cat-service .text-tile h3,
+.page-cat-service .text-tile h4 {
+	color: #FB1929;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.page-cat-sport .text-tile h1,
+.page-cat-sport .text-tile h2,
+.page-cat-sport .text-tile h3,
+.page-cat-sport .text-tile h4 {
+	color: #FF9219;
+	font-family: 'Open Sans', sans-serif;
+}
