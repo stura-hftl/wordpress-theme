@@ -17,6 +17,7 @@
 	}
 
 .publication_authors .date {
+    display: none;
 	}
 
 .publication_download {
@@ -31,6 +32,7 @@
 	}
 
 .publication_categories {
+	display: none;
 	}
 	
 .single-publication {
