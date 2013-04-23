@@ -289,6 +289,8 @@ body {
 .text-tile table {
 	margin: 10px auto;
 	border-collapse: collapse;
+	width: auto;
+	height: auto;
 }
 
 .text-tile td, .text-tile th {
