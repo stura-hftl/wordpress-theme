@@ -54,15 +54,18 @@ table {
 	border-spacing: 0;
 }
 
-/* = elements
+/* = links
  -------------------------------------------------------------- */
 
-a {
+.text-tile a { text-decoration: underline; }
+.text-tile a:hover { text-decoration: none; }
+
+a, .menu a {
 	text-decoration: none;
 	color: #4d4d4d;
 }
 
-a:hover {
+a:hover, .menu a:hover {
 	text-decoration: underline;
 }
 
@@ -285,9 +288,6 @@ body {
 	padding: 10px;
 	text-align: justify;
 }
-
-.text-tile a { text-decoration: underline; }
-.text-tile a:hover { text-decoration: none; }
 
 .text-tile table {
 	margin: 10px auto;
