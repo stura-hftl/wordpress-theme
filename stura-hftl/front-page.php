@@ -33,20 +33,20 @@ get_header();
 		<div class="grid-tile grid-tile-4">
 			<a class="bg-cat bg-cat-studentenrat" href="<?php echo home_url() ?>/studentenrat/"><h3>Studentenrat</h3></a>
 				<div class="text-tile">
-				<p>
-					<?php echo get_option("stura-frontpage-teaser-studentenrat"); ?>
-				</p>
+					<p>
+						<?php echo get_option("stura-frontpage-teaser-studentenrat"); ?>
+					</p>
+				</div>
 				<?php wp_nav_menu( array( 'theme_location' => 'studentenrat-menu' ) ); ?>
-			</div>
 		</div>
 		<div class="grid-tile grid-tile-4">
 			<a class="bg-cat bg-cat-service" href="<?php echo home_url() ?>/service/"><h3>Service</h3></a>
 				<div class="text-tile">
-				<p>
-					<?php echo get_option("stura-frontpage-teaser-service"); ?>
-				</p>
+					<p>
+						<?php echo get_option("stura-frontpage-teaser-service"); ?>
+					</p>
+				</div>
 				<?php wp_nav_menu( array( 'theme_location' => 'service-menu' ) ); ?>
-			</div>
 		</div>
 		<div class="grid-tile grid-tile-4">
 			<a class="bg-cat bg-cat-club" href="<?php echo home_url() ?>/club/"><h3>HfTL-Club</h3></a>
@@ -54,8 +54,8 @@ get_header();
 				<p>
 					<?php echo get_option("stura-frontpage-teaser-club"); ?>
 				</p>
-				<?php wp_nav_menu( array( 'theme_location' => 'club-menu' ) ); ?>
 			</div>
+			<?php wp_nav_menu( array( 'theme_location' => 'club-menu' ) ); ?>
 		</div>
 		<div class="grid-tile grid-tile-4 grid-tile-last">
 			<a class="bg-cat bg-cat-sport" href="<?php echo home_url() ?>/sport/"><h3>Sport</h3></a>
@@ -63,10 +63,9 @@ get_header();
 				<p>
 					<?php echo get_option("stura-frontpage-teaser-sport"); ?>
 				</p>
-				<?php wp_nav_menu( array( 'theme_location' => 'sport-menu' ) ); ?>
 			</div>
+			<?php wp_nav_menu( array( 'theme_location' => 'sport-menu' ) ); ?>
 		</div>
 	</div>
-
 </div>
 <?php get_footer(); ?>
