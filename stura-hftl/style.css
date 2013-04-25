@@ -286,6 +286,9 @@ body {
 	text-align: justify;
 }
 
+.text-tile a { text-decoration: underline; }
+.text-tile a:hover { text-decoration: none; }
+
 .text-tile table {
 	margin: 10px auto;
 	border-collapse: collapse;
