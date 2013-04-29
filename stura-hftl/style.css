@@ -290,6 +290,14 @@ body {
 	text-align: justify;
 }
 
+.text-tile strong {
+    font-weight: bold;
+}
+
+.text-tile em {
+    font-style: italic;
+}
+
 .text-tile a { text-decoration: underline; }
 .text-tile a:hover { text-decoration: none; }
 
