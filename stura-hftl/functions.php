@@ -14,7 +14,7 @@ $pictures = array(
 	"service" => array("Service Big-Picture", "960 x 150 px"),
 	"sport" => array("Sport Big-Picture", "960 x 300 px"),
 	"uncategorized" => array("Allgemein Big-Picture", "960 x 150 px"),
-	"error404" => array("404 Not Found Picture", "960 x 640 px")
+	"error404" => array("404 Not Found Picture", "960 x 150 px")
 );
 
 
