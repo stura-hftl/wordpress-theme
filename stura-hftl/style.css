@@ -326,6 +326,10 @@ body {
 	float: right;
 }
 
+.menu-item {
+    padding-bottom: 3px;
+}
+
 /* = contact form plugin
  -------------------------------------------------------------- */
 
