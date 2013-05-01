@@ -460,3 +460,11 @@ a.bg-cat:hover {
 .event_sturaevents div.event_head {
 	color: #1C95CA;
 }
+
+.event_sportevents {
+	border-color: #FF9219;
+}
+
+.event_sportevents div.event_head {
+	color: #FF9219;
+}
