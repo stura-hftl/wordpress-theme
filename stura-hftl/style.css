@@ -413,3 +413,50 @@ a.bg-cat:hover {
 .page-cat-sport .text-tile h4 {
 	color: #FF9219;
 }
+
+
+
+/* = calendar
+ -------------------------------------------------------------- */
+
+.event_listelement {
+	border-left: 10px solid;
+	padding-left: 10px;
+	margin-bottom: 15px;
+}
+
+.event_listelement div.event_head{
+	font-size: 14pt;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+.event_listelement span.event_dates {
+	font-weight: bold;
+}
+
+.event_listelement div.event_text{
+	font-size: 11pt;
+	color: #777777;
+}
+
+.event_clubtermine,
+.event_clubevents {
+	border-color: #22B10C;
+}
+
+.event_clubtermine div.event_head,
+.event_clubevents div.event_head {
+	color: #22B10C;
+}
+
+
+.event_sturatermine,
+.event_sturaevents {
+	border-color: #1C95CA;
+}
+
+.event_sturatermine div.event_head,
+.event_sturaevents div.event_head {
+	color: #1C95CA;
+}
