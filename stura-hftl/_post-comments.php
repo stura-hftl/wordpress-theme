@@ -4,8 +4,11 @@
 
 <?php if(!is_page()): ?>
 	<div id="comments">
-		<div class="hbar-style">
+		<div class="text-tile">
 			<h1>Kommentare</h1>
+		</div>
+		
+		<div class="hbar-style">
 			<?php foreach( get_comments($comment_args) as $comment ): ?>
 				<div class="item">
 					<h4><?php echo $comment->comment_author ?></h4>
