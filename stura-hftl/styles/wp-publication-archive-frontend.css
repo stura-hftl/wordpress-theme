@@ -3,10 +3,9 @@
 	}
 
 .publication_title {
-    font-family: 'Open Sans', sans-serif;
     color: #1C95CA;
-    font-size: 1.1em;
     padding-bottom: 5px;
+    font-weight: bold;
 	}
 
 .publication_authors {
