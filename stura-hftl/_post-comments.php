@@ -4,6 +4,7 @@
 
 <?php if(!is_page()): ?>
 	<div id="comments">
+		<?php if(have_comments()): ?>
 		<div class="text-tile">
 			<h1>Kommentare</h1>
 		</div>
@@ -17,7 +18,7 @@
 				</div>
 			<?php endforeach; ?>
 		</div>
-		
+		<?php endif; ?>
 		<div class="text-tile">
 			<h1>Kommentar schreiben</h1>
 			<?php comment_form(); ?>
