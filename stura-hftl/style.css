@@ -339,6 +339,13 @@ body {
 
 /* = comments
  -------------------------------------------------------------- */
+#comments {
+	margin-top: 50px;
+}
+
+#comments #reply-title {
+	display: none;
+}
 
 #comments label {
 	width: 150px;
@@ -360,9 +367,7 @@ body {
 #comments textarea { width: 400px; }
 
 #comments .form-allowed-tags {
-	margin-left: 150px;
-	font-size: 9pt;
-	color: #999;
+	display: none;
 }
 
 #comments #submit {
@@ -378,10 +383,21 @@ body {
 	width: auto;
 }
 
+.page-cat-studentenrat #comments #submit { background-color: #1C95CA; }
+.page-cat-club #comments #submit         { background-color: #22B10C; }
+.page-cat-service #comments #submit      { background-color: #FB1929; }
+.page-cat-sport #comments #submit        { background-color: #FF9219; }
+
+
 .hbar-style .item {
 	border-left: 10px solid #777777;
 	margin-left: 10px;
 }
+
+.page-cat-studentenrat .hbar-style .item { border-color: #1C95CA; }
+.page-cat-club .hbar-style .item         { border-color: #22B10C; }
+.page-cat-service .hbar-style .item      { border-color: #FB1929; }
+.page-cat-sport .hbar-style .item        { border-color: #FF9219; }
 
 .hbar-style h4, .hbar-style p {
 	padding: 0 10px;

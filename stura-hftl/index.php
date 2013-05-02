@@ -17,6 +17,7 @@ if(!empty($news))
 
 the_post(); // activates the post
 
+global $group_name;
 $group_name = stura_group_name($post);
 
 //----------------------------------

@@ -1,12 +1,10 @@
 <?php
 	$comment_args = array('post_id'=>$post->ID);
 ?>
-<h1 class="bg-cat group-tile bg-cat-<?php echo $group_name ?>">
-	Kommentare
-</h1>
 
 <div id="comments">
 	<div class="text-tile">
+		<h1>Kommentare</h1>
 		<?php comment_form(); ?>
 	</div>
 	
