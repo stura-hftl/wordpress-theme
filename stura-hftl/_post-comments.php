@@ -1,5 +1,5 @@
 <?php
-	$comment_args = array('post_id'=>$post->ID);
+	$comment_args = array('post_id'=>$post->ID, 'order'=>'ASC',);
 ?>
 
 <?php if(!is_page()): ?>
