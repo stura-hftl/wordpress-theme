@@ -2,7 +2,7 @@
 	$comment_args = array('post_id'=>$post->ID);
 ?>
 
-<?php if(have_comments()): ?>
+<?php if(!is_page()): ?>
 	<div id="comments">
 		<div class="text-tile">
 			<h1>Kommentare</h1>
