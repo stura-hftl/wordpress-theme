@@ -258,7 +258,6 @@ body {
  -------------------------------------------------------------- */
 
 .text-tile {
-	margin-top: -10px; /* Assuming, .text-tile follows after a bg-cat tile */
 }
 
 .text-tile h1 {
@@ -286,7 +285,7 @@ body {
 }
 
 .text-tile p {
-	padding: 10px;
+	padding: 0 10px 10px 10px;
 	text-align: justify;
 }
 
