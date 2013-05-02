@@ -41,6 +41,7 @@ function setup() {
 	register_sidebar(array('id' => 'footer-col-2', 'name' => "Footer Spalte 2", ));
 	register_sidebar(array('id' => 'footer-col-3', 'name' => "Footer Spalte 3", ));
 	register_sidebar(array('id' => 'footer-col-4', 'name' => "Footer Spalte 4", ));
+	register_sidebar(array('id' => 'not-found', 'name' => "404 Widgets", ));
 
 	register_nav_menu('studentenrat-menu', __('StuRa Menu'));
 	register_nav_menu('club-menu', __('Club Menu'));
