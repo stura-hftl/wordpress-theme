@@ -392,12 +392,28 @@ body {
 .hbar-style .item {
 	border-left: 10px solid #777777;
 	margin-left: 10px;
+	margin-bottom: 10px;
 }
 
 .page-cat-studentenrat .hbar-style .item { border-color: #1C95CA; }
 .page-cat-club .hbar-style .item         { border-color: #22B10C; }
 .page-cat-service .hbar-style .item      { border-color: #FB1929; }
 .page-cat-sport .hbar-style .item        { border-color: #FF9219; }
+
+.item.item-color-studentenrat { border-color: #1C95CA; }
+.item.item-color-club         { border-color: #22B10C; }
+.item.item-color-service      { border-color: #FB1929; }
+.item.item-color-sport        { border-color: #FF9219; }
+
+.page-cat-studentenrat .hbar-style h4 { color: #1C95CA; }
+.page-cat-club .hbar-style h4         { color: #22B10C; }
+.page-cat-service .hbar-style h4      { color: #FB1929; }
+.page-cat-sport .hbar-style h4        { color: #FF9219; }
+
+.item.item-color-studentenrat h4 { color: #1C95CA; }
+.item.item-color-club h4         { color: #22B10C; }
+.item.item-color-service h4      { color: #FB1929; }
+.item.item-color-sport h4        { color: #FF9219; }
 
 .hbar-style h4, .hbar-style p {
 	padding: 0 10px;

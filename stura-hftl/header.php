@@ -13,7 +13,7 @@
 		
 		<?php wp_head(); ?>
 	</head>
-	<body class="page-cat-<?php echo stura_group_name($post) ?>">
+	<body class="<?php if(is_singular()) echo "page-cat-".stura_group_name($post); ?>">
 		<div id="header">
 			<?php require "_header-banner.php" ?>
 			<?php require "_header-nav.php" ?>

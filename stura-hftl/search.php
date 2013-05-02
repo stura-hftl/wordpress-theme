@@ -10,22 +10,18 @@ get_header(); ?>
 		</div>
 		
 		<?php if ( have_posts() ) : ?>
-			<div id="news-grid" class="grid-row">
+			<div class="hbar-style">
 				<?php while ( have_posts() ) : the_post(); ?>
-					<div class="grid-tile grid-tile-2 <?php echo (++$i%2==0)?"grid-tile-last":''; ?>">
-						<a class="<?php stura_print_bg_class($post); ?>"
-							 href="<?php echo get_permalink($post->ID); ?>">
-							<p>
-								<? echo the_title(); ?>
-							</p>
-						</a>
-						
-						<div class="text-tile">
-							<? echo the_excerpt(); ?>
-						</div>
+					<div class="item item-color-<?php echo stura_group_name($post); ?>">
+						<a href="<?php echo get_permalink($post->ID); ?>"><h4>
+							<?php echo the_title(); ?>
+						</h4></a>
+						<?php /* <p class="meta"><?php echo "$comment->comment_date" ?></p> */?>
+						<p class="text"><?php echo the_excerpt(); ?></p>
 					</div>
 				<?php endwhile; ?>
 			</div>
+			
 		<?php else: ?>
 			
 			<div class="bg-cat bg-cat-uncategorized">
