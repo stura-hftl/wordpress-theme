@@ -5,6 +5,7 @@
 <?php if(!is_page()): ?>
 	<div id="comments">
 		<div class="hbar-style">
+			<h1>Kommentare</h1>
 			<?php foreach( get_comments($comment_args) as $comment ): ?>
 				<div class="item">
 					<h4><?php echo $comment->comment_author ?></h4>
@@ -15,7 +16,6 @@
 		</div>
 		
 		<div class="text-tile">
-			<h1>Kommentare</h1>
 			<?php comment_form(); ?>
 		</div>
 		
