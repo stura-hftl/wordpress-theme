@@ -31,7 +31,7 @@ get_header();
 	<div class="grid-row">
 		<div id="post" class="grid-tile grid-col-content">
 			<?php require "_post-content.php" ?>
-			<?php //require "_post-comments.php" ?>
+			<?php comments_template("/_post-comments.php") // fuck PHP ?>
 		</div>
 		<div id="sidebar" class="grid-tile grid-col-sidebar">
 			<?php require "_post-sidebar.php" ?>

@@ -337,9 +337,66 @@ body {
 }
 
 
-/* = contact form plugin
+/* = comments
  -------------------------------------------------------------- */
 
+#comments label {
+	width: 150px;
+	display: block;
+	float: left;
+	padding: 7px 0;
+}
+
+#comments .required {
+	color: #f00;
+}
+
+#comments input, #comments textarea {
+	border: 1px solid #000;
+	padding: 5px 10px;
+}
+
+#comments input { width: 300px; }
+#comments textarea { width: 400px; }
+
+#comments .form-allowed-tags {
+	margin-left: 150px;
+	font-size: 9pt;
+	color: #999;
+}
+
+#comments #submit {
+	color: #fff;
+	font-size: 16pt;
+	font-family: 'Open Sans', sans-serif;
+	padding: 10px;
+	border: 0;
+	cursor: pointer;
+	margin: 0;
+	margin-left: 150px;
+	outline: 10px solid #fff;
+	width: auto;
+}
+
+.hbar-style .item {
+	border-left: 10px solid #777777;
+	margin-left: 10px;
+}
+
+.hbar-style h4, .hbar-style p {
+	padding: 0 10px;
+}
+
+.hbar-style h4 {
+	font-size: 14pt;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+.hbar-style .text {
+	font-size: 11pt;
+	color: #777777;
+}
 
 /* = background tile
  -------------------------------------------------------------- */
