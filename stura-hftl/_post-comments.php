@@ -4,11 +4,6 @@
 
 <?php if(!is_page()): ?>
 	<div id="comments">
-		<div class="text-tile">
-			<h1>Kommentare</h1>
-			<?php comment_form(); ?>
-		</div>
-		
 		<div class="hbar-style">
 			<?php foreach( get_comments($comment_args) as $comment ): ?>
 				<div class="item">
@@ -18,5 +13,11 @@
 				</div>
 			<?php endforeach; ?>
 		</div>
+		
+		<div class="text-tile">
+			<h1>Kommentare</h1>
+			<?php comment_form(); ?>
+		</div>
+		
 	</div>
 <?php endif; ?>
