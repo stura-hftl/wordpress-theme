@@ -19,6 +19,7 @@
 		</div>
 		
 		<div class="text-tile">
+			<h1>Kommentar schreiben</h1>
 			<?php comment_form(); ?>
 		</div>
 		
