@@ -262,24 +262,28 @@ body {
 
 .text-tile h1 {
 	padding: 10px;
+	margin-top: 10px;
 	font-size: 1.4em;
 	font-family: 'Open Sans', sans-serif;
 }
 
 .text-tile h2 {
 	padding: 10px;
+	margin-top: 10px;
 	font-size: 1.3em;
 	font-family: 'Open Sans', sans-serif;
 }
 
 .text-tile h3 {
 	padding: 10px;
+	margin-top: 10px;
 	font-size: 1.2em;
 	font-family: 'Open Sans', sans-serif;
 }
 
 .text-tile h4 {
 	padding: 10px;
+	margin-top: 10px;
 	font-size: 1.1em;
 	font-family: 'Open Sans', sans-serif;
 }
