@@ -434,6 +434,24 @@ body {
 	color: #777777;
 }
 
+/* = 404
+ -------------------------------------------------------------- */
+
+#not-found-sidebar {
+	margin: 0;
+}
+
+#not-found-sidebar li.widget {
+	list-style-type: none;
+}
+
+#not-found-sidebar li.widget h2 {
+	background: #999;
+	color: #fff;
+	margin-bottom: 10px;
+}
+
+
 /* = background tile
  -------------------------------------------------------------- */
 

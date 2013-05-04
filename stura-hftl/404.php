@@ -2,7 +2,7 @@
 
 <div id="body">
 	<div class="text-tile">
-		<ul>
+		<ul id="not-found-sidebar">
 			<?php dynamic_sidebar('not-found'); ?>
 		</ul>
 	</div>
