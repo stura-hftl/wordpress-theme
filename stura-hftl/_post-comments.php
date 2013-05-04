@@ -6,7 +6,7 @@
 	<div id="comments">
 		<?php if(have_comments()): ?>
 		<div class="text-tile">
-			<h1>Kommentare</h1>
+			<h1><?php echo $post->comment_count . _n(" Kommentar", " Kommentare", $post->comment_count); ?></h1>
 		</div>
 		
 		<div class="hbar-style">
