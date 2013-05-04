@@ -568,3 +568,25 @@ a.bg-cat:hover {
 .event_sportevents div.event_head {
 	color: #FF9219;
 }
+
+
+/* = colored-item
+ -------------------------------------------------------------- */
+
+.colored-item {
+	clear: both;
+}
+
+.colored-item .image-left {
+	width: 150px;
+	height: 150px; 
+	overflow: hidden;
+	float: left;
+	background-color: #1c95ca;
+	padding-left: 10px;
+}
+
+.colored-item .text-right {
+	margin-left: 165px;
+	height: 150px;
+}
