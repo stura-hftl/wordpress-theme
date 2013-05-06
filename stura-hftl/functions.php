@@ -113,11 +113,18 @@ function setup_settings_pictures() {
 
 function _get_group_by_page($page)
 {
+	global $groups;
+
 	$ancestors = get_ancestors( $page->ID, 'page' );
 	$root_id = array_pop($ancestors);
 	$root_page = get_page($root_id);
 
-	return $root_page->post_name;
+	$name = $root_page->post_name;
+
+	if(!isset($groups[$name]))
+		$name = "uncategorized";
+
+	return $name;
 }
 
 function _get_group_by_post($post)
