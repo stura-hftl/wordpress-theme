@@ -6,22 +6,39 @@ $location_format = str_replace ( ">", "&gt;", str_replace ( "<", "&lt;", get_opt
 
 /////////////////////////////////////////
 //HACK FOR STURA HFTL: ICAL PER CATEGORY
+//$allowed_cats = array('stura','club','sturaintern','clubintern');
 /* Get the category ID */
 $uri=$_SERVER['REQUEST_URI'];
 $args=explode('/',$uri);
-//DEBUG:
-echo $args;
 /* handling different permalinks */
 if ($args[1]=='index.php') {
 	$start_index_URI=2;
 }else{
 	$start_index_URI=1;
 }
-/* retrieve category ID from WP Events Manager DB */
-if($args[$start_index_URI]=='events' && $args[$start_index_URI + 1]=='categories') {
-	$cat_name=$args[$start_index_URI + 2];
-	$cat_obj=get_term_by('name', $cat_name , 'event-categories');
-	$cat_id=$cat_obj->term_id;
+/* handle different categories from WP Events Manager DB */
+if($args[$start_index_URI]=='events' && $args[$start_index_URI + 1]=='stura') {
+	$cat_obj=get_term_by('slug', 'sturatermine' , 'event-categories');
+	$cat_id[0]=$cat_obj->term_id;
+	$cat_obj=get_term_by('slug', 'sturaevents' , 'event-categories');
+	$cat_id[1]=$cat_obj->term_id;
+	$cat_obj=get_term_by('slug', 'sportevents' , 'event-categories');
+	$cat_id[2]=$cat_obj->term_id;
+}
+else if($args[$start_index_URI]=='events' && $args[$start_index_URI + 1]=='club') {
+	$cat_obj=get_term_by('slug', 'clubtermine' , 'event-categories');
+	$cat_id[0]=$cat_obj->term_id;
+	$cat_obj=get_term_by('slug', 'clubevents' , 'event-categories');
+	$cat_id[1]=$cat_obj->term_id;
+}
+else if($args[$start_index_URI]=='events' && isset($args[$start_index_URI + 2])) {
+	$cat_name = $args[$start_index_URI + 1];
+	$cat_secret = $args[$start_index_URI + 2];
+	if($cat_secret == get_option('ical_secret_'.$cat_name))
+	{
+		$cat_obj=get_term_by('slug', $cat_name , 'event-categories');
+		$cat_id[0]=$cat_obj->term_id;
+	}
 }
 /////////////////////////////////////////
 
@@ -33,8 +50,18 @@ if( !empty($EM_Event) && get_class($EM_Event) == 'EM_Event' ){
 }else{
     $ical_limit = get_option('dbem_ical_limit');
     $page_limit = $ical_limit > 50 || !$ical_limit ? 50:$ical_limit; //set a limit of 50 to output at a time, unless overall limit is lower
-	$args = apply_filters('em_calendar_template_args',array('limit'=>$page_limit, 'page'=>'1', 'owner'=>false, 'orderby'=>'event_start_date', 'scope' => get_option('dbem_ical_scope'), 'category'=>$cat_id ));
-	$EM_Events = EM_Events::get( $args );
+	for($x=0;$x<count($cat_id);$x++)
+	{
+		$args = apply_filters('em_calendar_template_args',array('limit'=>$page_limit, 'page'=>'1', 'owner'=>false, 'orderby'=>'event_start_date', 'scope' => get_option('dbem_ical_scope'), 'category'=>$cat_id[$x] ));
+		if(isset($EM_Events))
+		{
+			$EM_Events = array_merge($EM_Events, EM_Events::get( $args ));
+		}
+		else
+		{
+			$EM_Events = EM_Events::get( $args );
+		}
+	}
 }
 
 //calendar header
