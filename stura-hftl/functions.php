@@ -7,6 +7,10 @@ $groups = array(
 	"sport" => "Sport"
 );
 
+$group_alias = array(
+	"shop" => "service"
+);
+
 $pictures = array(
 	"frontpage" => array("Frontpage Big-Picture", "960 x 300 px"),
 	"studentenrat" => array("StuRa Big-Picture", "960 x 150 px"),
@@ -14,7 +18,8 @@ $pictures = array(
 	"service" => array("Service Big-Picture", "960 x 150 px"),
 	"sport" => array("Sport Big-Picture", "960 x 300 px"),
 	"uncategorized" => array("Allgemein Big-Picture", "960 x 150 px"),
-	"error404" => array("404 Not Found Picture", "960 x 150 px")
+	"error404" => array("404 Not Found Picture", "960 x 150 px"),
+	"shop" => array("Shop", "960 x 150 px")
 );
 
 
@@ -47,10 +52,7 @@ function setup() {
 	register_nav_menu('club-menu', __('Club Menu'));
 	register_nav_menu('service-menu', __('Service Menu'));
 	register_nav_menu('sport-menu', __('Sport Menu'));
-	register_nav_menu('technik-menu', __('Technik Referat Menu'));
-	register_nav_menu('hopo-menu', __('HoPo Referat Menu'));
-	register_nav_menu('betreuung-menu', __('Betreuung Referat Menu'));
-	register_nav_menu('finanzen-menu', __('Finanzen Referat Menu'));
+	register_nav_menu('shop-menu', __('Shop Menu'));
 	
 	// relocate some plugin styles
 	wp_deregister_style("form-manager-css");
@@ -114,6 +116,7 @@ function setup_settings_pictures() {
 function _get_group_by_page($page)
 {
 	global $groups;
+	global $group_alias;
 
 	$ancestors = get_ancestors( $page->ID, 'page' );
 	$root_id = array_pop($ancestors);
@@ -121,10 +124,14 @@ function _get_group_by_page($page)
 
 	$name = $root_page->post_name;
 
-	if(!isset($groups[$name]))
-		$name = "uncategorized";
+	if(isset($groups[$name]))
+		return $name;
 
-	return $name;
+	if(isset($group_alias[$name]))
+		return $name;
+
+	return "uncategorized";
+
 }
 
 function _get_group_by_post($post)
@@ -146,7 +153,7 @@ function _get_group_by_post($post)
 	return 'uncategorized';
 }
 
-function stura_group_name($obj)
+function stura_alias_name($obj)
 {
 	/**
 	 * Group names are: frontpage, stura, service, club, sport
@@ -166,6 +173,20 @@ function stura_group_name($obj)
 	}
 
 	return 'uncategorized';
+}
+
+function stura_group_name($obj)
+{
+	global $group_alias;
+
+	$group = stura_alias_name($obj);
+
+	if(isset($group_alias[$group]))
+		return $group_alias[$group];
+
+	else
+		return $group;
+
 }
 
 function stura_is_grouppage($obj)
@@ -193,7 +214,10 @@ function stura_group_label($obj)
 
 function stura_print_menu($obj)
 {
-	$group = stura_group_name($obj);
+	$group = stura_alias_name($obj);
+	if(!has_nav_menu($group.'-menu'))
+		$group = stura_group_name($obj);
+		
 	wp_nav_menu( array( 'theme_location' => $group.'-menu' ) );
 }
 

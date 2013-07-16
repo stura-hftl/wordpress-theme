@@ -25,6 +25,10 @@
 	padding: 5px 10px;
 }
 
+.fm-form input[type="radio"] {
+	border: none;
+}
+
 .fm-form div {
 	text-align: right;
 }

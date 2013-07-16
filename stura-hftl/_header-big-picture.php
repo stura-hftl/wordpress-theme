@@ -9,7 +9,7 @@
 				</div>
 			<?php elseif(is_single() || is_page()): ?>
 				<div id="header-picture" class="grouppage"
-					style="background-image: url(<?php echo get_option("stura-bigpicture-".stura_group_name($post)); ?>)">
+					style="background-image: url(<?php echo get_option("stura-bigpicture-".stura_alias_name($post)); ?>)">
 				</div>
 			<?php else: ?>
 				<div id="header-picture" class="grouppage"
