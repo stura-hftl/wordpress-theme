@@ -8,7 +8,8 @@ $groups = array(
 );
 
 $group_alias = array(
-	"shop" => "service"
+	"shop" => "service",
+	"intern" => "service"
 );
 
 $pictures = array(
@@ -53,6 +54,7 @@ function setup() {
 	register_nav_menu('service-menu', __('Service Menu'));
 	register_nav_menu('sport-menu', __('Sport Menu'));
 	register_nav_menu('shop-menu', __('Shop Menu'));
+	register_nav_menu('intern-menu', __('Internal Menu'));
 	
 	// relocate some plugin styles
 	wp_deregister_style("form-manager-css");
