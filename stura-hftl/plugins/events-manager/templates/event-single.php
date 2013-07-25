@@ -33,7 +33,7 @@ $description = $EM_Event->post_content;
 		</span>
 	</div>
 	<div class="event_text">
-		<p> Kategorien: <?php echo join(", ", $categories); ?></p>
+		<p><?php (count($categories)<=1)?"Kategorie":"Kategorien";?>: <?php echo join(", ", $categories); ?></p>
 	</div>
 </div>
 
