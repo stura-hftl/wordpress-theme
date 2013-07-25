@@ -41,6 +41,9 @@ function startswith($haystack, $needle)
 
 
 function setup() {
+
+	global $groups;
+	global $group_alias;
 	
 	register_sidebar(array('id' => 'sidebar', 'name' => "Sidebar", ));
 	register_sidebar(array('id' => 'footer-col-1', 'name' => "Footer Spalte 1", ));
@@ -49,13 +52,12 @@ function setup() {
 	register_sidebar(array('id' => 'footer-col-4', 'name' => "Footer Spalte 4", ));
 	register_sidebar(array('id' => 'not-found', 'name' => "404 Widgets", ));
 
-	register_nav_menu('studentenrat-menu', __('StuRa Menu'));
-	register_nav_menu('club-menu', __('Club Menu'));
-	register_nav_menu('service-menu', __('Service Menu'));
-	register_nav_menu('sport-menu', __('Sport Menu'));
-	register_nav_menu('shop-menu', __('Shop Menu'));
-	register_nav_menu('intern-menu', __('Internal Menu'));
-	
+	foreach($groups as $slug => $label)
+		register_nav_menu($slug."-menu", $label . " Menu");
+
+	foreach($group_alias as $slug => $alias)
+		register_nav_menu($slug."-menu", "Alias Menu: " . $slug);
+
 	// relocate some plugin styles
 	wp_deregister_style("form-manager-css");
 	wp_register_style("form-manager-css", get_template_directory_uri()."/styles/form-manager.css");
