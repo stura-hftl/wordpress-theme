@@ -541,6 +541,7 @@ a.bg-cat:hover {
 	border-left: 10px solid;
 	padding-left: 10px;
 	margin-bottom: 15px;
+	margin-left: 10px;
 }
 
 .event_listelement div.event_head{
@@ -556,6 +557,7 @@ a.bg-cat:hover {
 .event_listelement div.event_text{
 	font-size: 11pt;
 	color: #777777;
+	padding-top: 5px;
 }
 
 .event_clubtermine,
