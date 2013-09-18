@@ -38,5 +38,5 @@ $description = $EM_Event->post_content;
 </div>
 
 <div class="text-tile">
-	<p><?php echo $description; ?>
+	<p><?php echo nl2br($description); ?>
 </div>
