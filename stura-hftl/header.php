@@ -17,7 +17,7 @@
 		<div id="header">
 		<div id="birthday">
 			<img src="http://stura.hft-leipzig.de/wp-content/uploads/2013/09/grafik_900x600_neu_07.jpg"><br />
-			<p>Der erste Geburtstag des neuen sächsischen Hochschul"freiheits"gesetzes. Auch wenn unsere private Hochschule nicht direkt betroffen ist "feiern" wir in Solidarität mit allen staatlichen sächsischen Hochschulen und Universitäten mit! Mehr Infos unter <a href="http://www.kss-sachsen.de/uploads/media/PM_17_2013_1_Jahr_SaechsHSFG_01.pdf" target="_blank">www.kss-sachsen.de/uploads/media/PM_17_2013_1_Jahr_SaechsHSFG_01.pdf</a></p>
+			<p>Der erste Geburtstag des neuen sächsischen Hochschul"freiheits"gesetzes. Auch wenn unsere private Hochschule nicht direkt betroffen ist "feiern" wir in Solidarität mit allen staatlichen sächsischen Hochschulen und Universitäten mit! <br />Mehr Infos unter <a href="http://www.kss-sachsen.de/uploads/media/PM_17_2013_1_Jahr_SaechsHSFG_01.pdf" target="_blank">www.kss-sachsen.de/uploads/media/PM_17_2013_1_Jahr_SaechsHSFG_01.pdf</a><br /></p>
 		</div>
 			<?php require "_header-banner.php" ?>
 			<?php require "_header-nav.php" ?>
