@@ -15,10 +15,6 @@
 	</head>
 	<body class="<?php if(is_singular()) echo "page-cat-".stura_group_name($post); ?>">
 		<div id="header">
-		<div id="birthday">
-			<img src="http://stura.hft-leipzig.de/wp-content/uploads/2013/09/grafik_900x600_neu_07.jpg"><br />
-			<p>Der erste Geburtstag des neuen sächsischen Hochschul"freiheits"gesetzes. Auch die Studierenden unserer privaten Hochschule sind von dieser Gesetzesänderung direkt betroffen, darum "feiern" auch wir mit! <br />Mehr Infos unter <a href="http://www.kss-sachsen.de/uploads/media/PM_17_2013_1_Jahr_SaechsHSFG.pdf" target="_blank">www.kss-sachsen.de/uploads/media/PM_17_2013_1_Jahr_SaechsHSFG.pdf</a><br /><br /></p>
-		</div>
 			<?php require "_header-banner.php" ?>
 			<?php require "_header-nav.php" ?>
 			<?php require "_header-big-picture.php" ?>
