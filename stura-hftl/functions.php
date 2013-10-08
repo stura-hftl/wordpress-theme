@@ -232,4 +232,10 @@ function stura_print_bg_class($obj)
 }
 
 
+function etherpad_scripts() {
+    	wp_enqueue_script( 'jquery' );
+	wp_register_script( 'etherpad-jquery', 'http://stura.hft-leipzig.de/wp-includes/js/jquery/etherpad.js');
+    	wp_enqueue_script( 'etherpad-jquery' );
+}    
 
+add_action('wp_enqueue_scripts', 'etherpad_scripts');
