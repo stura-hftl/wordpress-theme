@@ -500,6 +500,10 @@ a.bg-cat:hover {
 	background-color: #FF9219;
 }
 
+.bg-cat-intern {
+	background-color: #8121D0;
+}
+
 .page-cat-studentenrat .text-tile a,
 .page-cat-studentenrat .text-tile h1,
 .page-cat-studentenrat .text-tile h2,
