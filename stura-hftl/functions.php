@@ -4,7 +4,8 @@ $groups = array(
 	"studentenrat" => "Studentenrat",
 	"club" => "HfTL-Club",
 	"service" => "Service",
-	"sport" => "Sport"
+	"sport" => "Sport",
+	"intern" => "Intern"
 );
 
 $group_alias = array(
