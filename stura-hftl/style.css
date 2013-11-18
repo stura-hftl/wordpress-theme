@@ -532,6 +532,14 @@ a.bg-cat:hover {
 	color: #FF9219;
 }
 
+.page-cat-intern .text-tile a,
+.page-cat-intern .text-tile h1,
+.page-cat-intern .text-tile h2,
+.page-cat-intern .text-tile h3,
+.page-cat-intern .text-tile h4 {
+	color: #8121D0;
+}
+
 
 
 /* = calendar
@@ -587,6 +595,16 @@ a.bg-cat:hover {
 
 .event_sportevents div.event_head {
 	color: #FF9219;
+}
+
+.event_sturaintern,
+.event_clubintern {
+	border-color: #8121D0;
+}
+
+.event_sturaintern div.event_head,
+.event_clubintern div.event_head {
+	border-color: #8121D0;
 }
 
 
