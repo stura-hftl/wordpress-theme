@@ -11,6 +11,8 @@
 	
 .publication_title a{
     text-decoration: none;
+    pointer-events: none;
+    cursor: default;
 	}
 
 .publication_authors {
