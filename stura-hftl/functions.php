@@ -8,8 +8,7 @@ $groups = array(
 );
 
 $group_alias = array(
-	"shop" => "service",
-	"intern" => "service"
+	"shop" => "service"
 );
 
 $pictures = array(
