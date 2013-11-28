@@ -329,6 +329,10 @@ body {
 	float: right;
 }
 
+.text-tile img.alignright {
+	margin-left: 15px;
+}
+
 .menu-item {
     padding-bottom: 3px;
 }
