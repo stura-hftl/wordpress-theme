@@ -239,3 +239,12 @@ function etherpad_scripts() {
 }    
 
 add_action('wp_enqueue_scripts', 'etherpad_scripts');
+
+
+// limit archive widget to show only the last 10 months
+function my_limit_archives($args){
+    $args['limit'] = 10;
+    return $args;
+}
+add_filter( 'widget_archives_args', 'my_limit_archives' );
+
