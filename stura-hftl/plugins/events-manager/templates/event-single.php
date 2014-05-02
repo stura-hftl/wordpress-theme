@@ -16,9 +16,12 @@ foreach($EM_Event->get_categories() as $cat) {
 
 $description = $EM_Event->post_content;
 
+$event_category_id = $EM_Event->get_categories()->get_ids();
+$event_category_slug = $EM_Event->get_categories()->categories[$event_category_id[0]]->slug;
+
 ?>
 
-<div class="event_listelement event_<?php echo $EM_Event->get_categories()->categories[$event_category_id[0]]->slug; ?>">
+<div class="event_listelement event_<?php echo $event_category_slug; ?>">
 	<div class="event_head"><?php echo $title; ?></div>
 	<div>
 		<span class="event_dates">Beginn:</span>
