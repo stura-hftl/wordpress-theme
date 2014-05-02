@@ -18,7 +18,7 @@ $description = $EM_Event->post_content;
 
 ?>
 
-<div class="event_listelement event_clubtermine">
+<div class="event_listelement event_<?php echo $EM_Event->get_categories()->categories[$event_category_id[0]]->slug; ?>">
 	<div class="event_head"><?php echo $title; ?></div>
 	<div>
 		<span class="event_dates">Beginn:</span>
