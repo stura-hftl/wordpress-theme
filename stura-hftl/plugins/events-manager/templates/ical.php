@@ -67,7 +67,8 @@ if( !empty($EM_Event) && get_class($EM_Event) == 'EM_Event' ){
 //calendar header
 $output = "BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//wp-events-plugin.com//".EM_VERSION."//EN";
+PRODID:-//wp-events-plugin.com//".EM_VERSION."//EN
+";
 echo preg_replace("/([^\r])\n/", "$1\r\n", $output);
 
 //loop through events
@@ -113,8 +114,7 @@ while ( count($EM_Events) > 0 ){
 	    );
 		
 //output ical item		
-$output = "
-BEGIN:VEVENT
+$output = "BEGIN:VEVENT
 UID:{$UID}
 DTSTART{$dateStart}
 DTEND{$dateEnd}
@@ -127,7 +127,8 @@ DESCRIPTION:{$description}";
 $output .= "
 LOCATION:{$location}
 URL:{$EM_Event->get_permalink()}
-END:VEVENT";
+END:VEVENT
+";
 
 		//clean up new lines, rinse and repeat
 		echo preg_replace("/([^\r])\n/", "$1\r\n", $output);
