@@ -145,6 +145,5 @@ END:VEVENT
 }
 
 //calendar footer
-$output = "
-END:VCALENDAR";
+$output = "END:VCALENDAR";
 echo preg_replace("/([^\r])\n/", "$1\r\n", $output);
