@@ -29,6 +29,7 @@
 .publication_download {
 	}
 .publication_summary {
+	display: none;
 	}
 
 .publication_summary .title, .publication_keywords .title, .publication_categories .title{
