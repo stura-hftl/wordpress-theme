@@ -119,6 +119,13 @@ body {
 	text-decoration: underline;
 }
 
+#header-banner a.rss-link {
+	background-image: url('/wp-content/themes/stura-hftl/img/feed-icon.png');
+	background-repeat: no-repeat;
+	background-position: left 50%;
+	padding-left:27px;
+}
+
 #header-picture {
 	margin-bottom: 10px;
 	text-align: center;

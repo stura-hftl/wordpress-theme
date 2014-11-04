@@ -5,6 +5,7 @@
 					</a>
 				</div>
 				<div class="right">
+                    <a href="<?php echo home_url(); ?>/feed" class="rss-link">Folge uns</a>
 					<a href="<?php echo home_url(); ?>">Startseite</a>
 					<a href="<?php echo home_url(); ?>/studentenrat/kontakt/">Kontakt</a>
 					<a href="https://www.facebook.com/stura.hftl" target="_blank">Facebook</a>
