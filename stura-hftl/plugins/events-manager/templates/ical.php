@@ -31,6 +31,10 @@ else if($args[$start_index_URI]=='events' && $args[$start_index_URI + 1]=='club'
 	$cat_obj=get_term_by('slug', 'clubevents' , 'event-categories');
 	$cat_id[1]=$cat_obj->term_id;
 }
+else if($args[$start_index_URI]=='events' && $args[$start_index_URI + 1]=='clubgeburtstage') {
+	$cat_obj=get_term_by('slug', 'clubgeburtstage' , 'event-categories');
+	$cat_id[0]=$cat_obj->term_id;
+}
 else if($args[$start_index_URI]=='events' && isset($args[$start_index_URI + 2])) {
 	$cat_name = $args[$start_index_URI + 1];
 	$cat_secret = $args[$start_index_URI + 2];
