@@ -641,5 +641,5 @@ a.bg-cat:hover {
 
 .colored-item .text-right {
 	margin-left: 165px;
-	height: 150px;
+	min-height: 150px;
 }
