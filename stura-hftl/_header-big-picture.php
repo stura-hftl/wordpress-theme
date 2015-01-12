@@ -1,7 +1,7 @@
 			
 			<?php if(is_front_page()): ?>
 				<div id="header-picture" class="frontpage"
-					style="background-image: url(<?php echo get_option("stura-bigpicture-frontpage"); ?>); cursor: pointer;" onClick="location.href='/wahl2015'">
+					style="background-image: url(<?php echo get_option("stura-bigpicture-frontpage"); ?>); cursor: pointer;" onClick="location.href='/2015/wahl-2015-das-sind-eure-kandidaten/'">
 				</div>
 			<?php elseif(is_404()): ?>
 				<div id="header-picture" class="errorpage"
