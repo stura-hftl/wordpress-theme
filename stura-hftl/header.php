@@ -9,7 +9,7 @@
 		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_directory'); ?>/styles/mensaplan.css">
 		<link rel="icon" href="<?php echo get_bloginfo('template_directory'); ?>/img/favicon.ico" type="image/x-icon">
 		 
-		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300|Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300|Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
 		
 		<?php wp_head(); ?>
 	</head>
