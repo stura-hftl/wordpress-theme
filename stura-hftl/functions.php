@@ -232,13 +232,13 @@ function stura_print_bg_class($obj)
 }
 
 
-function etherpad_scripts() {
-    	wp_enqueue_script( 'jquery' );
-	wp_register_script( 'etherpad-jquery', 'https://stura.hft-leipzig.de/wp-includes/js/jquery/etherpad.js');
-    	wp_enqueue_script( 'etherpad-jquery' );
-}    
+//function etherpad_scripts() {
+//    	wp_enqueue_script( 'jquery' );
+//	wp_register_script( 'etherpad-jquery', 'https://stura.hft-leipzig.de/wp-includes/js/jquery/etherpad.js');
+//    	wp_enqueue_script( 'etherpad-jquery' );
+//}    
 
-add_action('wp_enqueue_scripts', 'etherpad_scripts');
+//add_action('wp_enqueue_scripts', 'etherpad_scripts');
 
 
 // limit archive widget to show only the last 10 months
