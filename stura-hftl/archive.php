@@ -3,7 +3,7 @@
 $i = 0;
 
 get_header(); ?>
-		
+
 <div id="body">
 	<div class="bg-cat bg-cat-uncategorized">
 		<h1>
@@ -18,17 +18,17 @@ get_header(); ?>
 			<?php endif; ?>
 		</h1>
 	</div>
-	
-	
+
+
 	<div id="news-grid" class="grid-row">
 		<?php while ( have_posts() ) : the_post(); ?>
 			<a class="grid-tile grid-tile-5 <?php stura_print_bg_class($post); ?> <?php echo (++$i%5==0)?"grid-tile-last":''; ?>"
 				 href="<?php echo get_permalink($post->ID); ?>">
 				<p>
-					<? echo the_title(); ?>
+					<?php echo the_title(); ?>
 				</p>
 			</a>
-		
+
 		<?php endwhile; ?>
 	</div>
 
